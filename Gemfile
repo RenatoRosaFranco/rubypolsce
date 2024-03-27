@@ -8,9 +8,6 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -35,6 +32,7 @@ gem "redis", ">= 4.0.1"
 gem 'jquery'
 gem 'draper'
 gem 'stripe'
+gem 'pg'
 gem 'bootstrap3-rails'
 gem 'devise'
 gem 'rails_admin'
@@ -64,6 +62,9 @@ group :development, :test do
   gem 'simplecov'
   gem 'foreman'
   gem 'brakeman'
+  gem 'rubocop-rails'
+  gem 'rubocop-performance'
+  gem 'rubocop-rspec'
   gem 'awesome_print'
   gem 'ffaker'
   gem 'factory_bot_rails'
