@@ -1,0 +1,114 @@
+<%= provide :title, '' %>
+<%= provide :description, '' %>
+<%= provide :keywords, '' %>
+<%= provide :ld_json, {} %>
+
+<section id="analytics">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <div class='panel panel-default'>
+              <div class="panel-body">
+                <%= column_chart({
+                                   "daily"    => Donation.total_donated_at_day,
+                                   "Weekly"   => Donation.total_donated_at_week,
+                                   "Monthly"  => Donation.total_donated_at_month
+                                 })
+                %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h2 class="bold">
+                  <%= to_money(Donation.total_donated) %>
+                  <small>Year</small>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h3 class="bold">
+                  <%= to_money(Donation.total_donated_at_day) %>
+                  <small>/day</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h3 class="bold">
+                  <%= to_money(Donation.total_donated_at_week) %>
+                  <small>/week</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h3 class="bold">
+                  <%= to_money(Donation.total_donated_at_month) %>
+                  <small>/month</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table table-bordered table-hovered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @donations.each do |donation| %>
+              <tr>
+                <td><%= donation.id %></td>
+                <td class='bold'><%= donation.name %></td>
+                <td><%= link_to donation.email, "mailto:#{donation.email}" %></td>
+                <td><%= number_to_currency(donation.amount) %></td>
+                <td>
+                  <% if donation.completed? then %>
+                    <span class="badge alert-success">
+                      <%= DonationHelper.sanitize_status(donation.status) %>
+                    </span>
+                  <% else %>
+                    <span class="badge alert-info">
+                      <%= DonationHelper.sanitize_status(donation.status) %>
+                    </span>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <div class="text-center">
+          <%= paginate(@donations) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-4 ">
+          <h2 class="bold">Ruby Polsce</h2>
+          <p>Ruby, community and network!</p>
+          <p><%= link_to 'kontakt@rubypolsce.pl', 'mailto:kontakt@rubypolsce.pl', class: 'bold' %></p>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="bold">RubyPolsce</h4>
+          <ul class="list-unstyled">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Communities', root_path(anchor: 'communities') %></li>
+            <li><%= link_to 'Newsletter', root_path(anchor: 'newsletter') %></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4" id='newsletters'>
+          <h4 class="bold">Newsletter</h4>
+          <%= form_for(Newsletter.new, { url: newsletters_path, method: :post }) do |f| %>
+             <div class="form-group">
+               <div class="field">
+                 <div class="input-group">
+                   <div class="input-group-addon">
+                     <i class="fas fa-envelope"></i>
+                   </div>
+                   <%= f.email_field :email, class: 'form-control', required: 'required',
+                                     placeholder: 'Type your e-mail', autocomplete: 'off' %>
+                 </div>
+               </div>
+             </div>
+          <% end %>
+          <br />
+
+          <h4 class="bold">Media Social</h4>
+          <ul class="list-unstyled list-inline social">
+            <li>
+              <%= link_to 'https://instagram.com' do %>
+                <i class="fab fa-instagram"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to 'https://facebook.com' do %>
+                <i class="fa-brands fa-square-facebook"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to 'https://linkedin.com' do %>
+                <i class="fab fa-linkedin-in"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to 'mailto:rubypolsce.pl' do %>
+                <i class="fas fa-envelope"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

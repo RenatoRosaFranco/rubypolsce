@@ -1,0 +1,80 @@
+<%= provide :title, 'Your Hub for Ruby on Rails' %>
+<%= provide :description, 'Discover Ruby on Rails communities near you, become a developer or enhance your skills with Ruby Polsce.' %>
+<%= provide :keywords, 'Ruby, Rails, Community, Programming, Developer, Learning' %>
+<%= provide :ld_json, {
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Ruby Polsce",
+  "url": "https://rubypolsce.pl",
+  "logo": "http://rubypolsce.pl/assets/logo.png",
+  "sameAs": [
+    "https://facebook.com/rubypolsce",
+    "https://instagram.com/rubypolsce",
+    "https://linkedin.com/company/rubypolsce"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-111-222-3333",
+      "contactType": "customer service"
+    }
+  ]
+}.to_json %>
+
+<section id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <% if flash[:notice] %>
+          <div class="alert alert-success" style="margin-top: -80px;">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <p class="text-center"><%= flash[:notice] %></p>
+          </div>
+        <% end %>
+
+        <h1 class="text-center bold">Ruby Polsce</h1>
+        <p class="text-center">
+          Find a ruby community near of your, become a developer<br/>
+          or level up your knowledge.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="communities">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="bold text-center">Communities</h2>
+        <p class="text-center">Meet a community near of you.</p>
+        <br />
+
+        <% @communities.each do |community| %>
+          <%= render partial: 'home/community', locals: { community: community } %>
+        <% end  %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="bold text-center">Want be your partner?</h1>
+        <p class="text-center">Apply to our partnership program.</p>
+        <br />
+
+        <div class='text-center'>
+          <%= link_to '', class: 'btn btn-primary btn-lg' do %>
+            I want to be a partner.
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

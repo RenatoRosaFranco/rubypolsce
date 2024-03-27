@@ -1,0 +1,56 @@
+<%= link_to community.external_link, target: :_blank do %>
+  <div class="col-md-3 community">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object logo" src="">
+              </a>
+              <div class="media-body">
+                <h5 class="media-heading title bold">
+                  <%= truncate(community.name, length: 20) %>
+                </h5>
+                <p class="subtitle">Poland</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <hr />
+            <ul class="list-unstyled list-inline">
+              <li>
+                <%= link_to community.external_link do %>
+                  <i class="fa-solid fa-link"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '' do %>
+                  <i class="fa-brands fa-square-facebook"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '' do %>
+                  <i class="fa-brands fa-instagram"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '' do %>
+                  <i class="fa-brands fa-linkedin"></i>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '' do %>
+                  <i class="fa-brands fa-github"></i>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

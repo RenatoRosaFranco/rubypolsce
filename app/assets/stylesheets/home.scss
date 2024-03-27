@@ -1,0 +1,57 @@
+.home {
+  position: relative;
+
+  .navbar-default {
+    position: relative;
+    background-color: #EEE;
+  }
+
+  #hero {
+    background-color: #EEE;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    margin-top: -20px;
+
+    h1 {
+      position: relative;
+      font-size: 68px;
+    }
+
+    p {
+      position: relative;
+      font-size: 18px;
+    }
+  }
+
+  #communities {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    border: 1px solid #EEE;
+
+    .community {
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 5px;
+        background-color: #EEE;
+        border: 1px solid #EEE;
+      }
+    }
+  }
+
+  #partners {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    a {
+      position: relative;
+      border-radius: 25px;
+      background-color: transparent;
+      border: 1px solid #CCC;
+      font-weight: bold;
+      color: #CCC;
+    }
+  }
+}

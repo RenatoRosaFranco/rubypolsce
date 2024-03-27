@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap
+ *= require_self
+ */
+
+body{
+    position: relative;
+    font-size: 16px;
+}
+
+#banner {
+    position: relative;
+    background-color: #EEE;
+    padding-top: 15px;
+    padding-bottom: 4px;
+
+    .uk-banner {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        border-radius: 24px;
+        margin-right: 5px;
+        border: 1px solid #CCC;
+        background-color: #CCC;
+    }
+}
+
+.top {
+    position: relative;
+    margin-top: 5px;
+}
+
+.full-width {
+    position: relative;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#header {
+    position: relative;
+
+    .navbar-default {
+        .avatar-md {
+            position: relative;
+            width: 24px;
+            height: 22px;
+            border: 1px solid #CCC;
+            background-color: #CCC;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    border: 1px solid #EEE;
+    background-color: #EEE;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    bottom: 0px;
+
+    .social {
+        i {
+            position: relative;
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid #CCC;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<%= render partial: 'shared/banner' %>
+
+<header id="header">
+  <nav class="navbar navbar-default">
+    <div class="container container-fluid">
+      <div class="navbar-header">
+        <%= link_to root_path, class: 'bold navbar-brand' do %>
+          Ruby Polsce
+        <% end  %>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to 'mailto:kontakt@rubypolsce.pl', class: 'bold' do %>
+            <i class="fas fa-envelope"></i>
+            kontakt@rubypolsce.pl
+          <% end %>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Donate', donations_path, class: 'bold' %></li>
+        <li><%= link_to 'Analytics', analytics_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Communities', root_path(anchor: 'communities') %></li>
+        <li><%= link_to 'Newsletters', root_path(anchor: 'newsletters') %></li>
+        <% if current_user %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= image_tag('', class: 'avatar-md') %>
+              <%= current_user.name %> <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <% if current_user.admin? %>
+                <li><%= link_to 'Dashboard', rails_admin_path %> </li>
+                <li class="divider"></li>
+                <li><%= link_to 'Log Out', destroy_user_session_path, data: { 'turbo-method': :delete } %></li>
+              <% else %>
+                <li><%= link_to 'Log Out', destroy_user_session_path, data: { 'turbo-method': :delete } %></li>
+              <% end  %>
+            </ul>
+          </li>
+        <% else %>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
