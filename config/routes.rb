@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   get 'analytics' => 'donations#analytics'
   resources :donations, only: [:index, :create]
   resources :newsletters, only: [:create, :destroy], param: :token
+
+  # Namespace
+  namespace :dashboard do
+    get '', to: 'home#index'
+  end
 end
