@@ -20,7 +20,7 @@
 #
 require 'rails_helper'
 
-RSpec.describe Community, type: :model do
+RSpec.describe Community do
   let(:user) { FactoryBot.create(:user, :admin) }
 
   describe 'valid object' do
