@@ -2,7 +2,7 @@
 #
 # Table name: donations
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  amount     :float
 #  email      :string
 #  name       :string

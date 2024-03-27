@@ -56,6 +56,14 @@
         <% @communities.each do |community| %>
           <%= render partial: 'home/community', locals: { community: community } %>
         <% end  %>
+
+        <% if @communities.empty? %>
+          <div class="col-md-12">
+            <p class="well text-center">
+              Sorry, we couldn't find any communities.
+            </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
