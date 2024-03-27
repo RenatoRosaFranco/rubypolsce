@@ -1,6 +1,6 @@
 # Use an official Ruby runtime as a parent image
 
-FROM ruby:2.7
+FROM ruby:3.0.2
 
 # Install Node.js and build dependencies for native gems
 RUN apt-get update -qq && apt-get install -y build-essential libxml2-dev libxslt1-dev \
