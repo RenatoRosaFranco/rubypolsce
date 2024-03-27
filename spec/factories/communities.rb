@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: communities
@@ -12,6 +14,7 @@
 #
 # Indexes
 #
+#  index_communities_on_name     (name) UNIQUE
 #  index_communities_on_user_id  (user_id)
 #
 # Foreign Keys
@@ -21,8 +24,8 @@
 FactoryBot.define do
   factory :community do
     logo { nil }
-    name { "PLRUG" }
-    external_link { "https://plrug.pl" }
-    association :user
+    name { 'PLRUG' }
+    external_link { 'https://plrug.pl' }
+    user
   end
 end

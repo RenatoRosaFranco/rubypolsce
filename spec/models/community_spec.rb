@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: communities
@@ -12,6 +14,7 @@
 #
 # Indexes
 #
+#  index_communities_on_name     (name) UNIQUE
 #  index_communities_on_user_id  (user_id)
 #
 # Foreign Keys
@@ -21,12 +24,12 @@
 require 'rails_helper'
 
 RSpec.describe Community do
-  let(:user) { FactoryBot.create(:user, :admin) }
+  let(:user) { create(:user, :admin) }
 
   describe 'valid object' do
-    subject { FactoryBot.build(:community, user: user) }
+    subject(:community) { build(:community, user: user) }
 
-    it { expect(subject).to be_valid }
+    it { expect(community).to be_valid }
   end
 
   describe 'associations' do
@@ -35,7 +38,7 @@ RSpec.describe Community do
   end
 
   describe 'validations' do
-    subject { FactoryBot.create(:community, user: user) }
+    subject { create(:community, user: user) }
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }

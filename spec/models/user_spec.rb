@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: users
@@ -20,8 +22,8 @@
 #
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  subject { FactoryBot.create(:user, password: 'test123', password_confirmation: 'test123') }
+RSpec.describe User do
+  subject(:user) { create(:user, password: 'test123', password_confirmation: 'test123') }
 
   describe 'associations' do
     it { is_expected.to have_many(:communities).dependent(:destroy) }
@@ -29,16 +31,16 @@ RSpec.describe User, type: :model do
 
   describe 'devise' do
     it 'is database authenticatable' do
-      expect(subject.valid_password?('test123')).to be_truthy
+      expect(user).to be_valid_password('test123')
     end
 
     it 'is rememberable' do
-      expect(subject.respond_to?(:send_reset_password_instructions)).to be_truthy
+      expect(user).to respond_to(:send_reset_password_instructions)
     end
 
     it 'is validatable' do
-      user = FactoryBot.build(:user, email: 'invalid', password: 'short', password_confirmation: 'short')
-      expect(user.valid?).to be_falsey
+      user = build(:user, email: 'invalid', password: 'short', password_confirmation: 'short')
+      expect(user).not_to be_valid
     end
   end
 end
