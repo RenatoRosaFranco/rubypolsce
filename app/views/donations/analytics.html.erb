@@ -102,6 +102,16 @@
                 </td>
               </tr>
             <% end %>
+
+            <% if @donations.empty? %>
+              <tr>
+                <td colspan="5">
+                  <p class="text-center" style="padding-top: 12px;">
+                    No donations found.
+                  </p>
+                </td>
+              </tr>
+            <% end %>
           </tbody>
         </table>
 
