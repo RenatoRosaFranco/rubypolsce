@@ -1527,6 +1527,40 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="pg (v1.5.6) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/misc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/certs" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/sample" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/rakelib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/misc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/certs" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/sample" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/rakelib" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/misc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/certs" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/sample" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/pg-1.5.6/rakelib" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="pry (v0.14.2) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -2538,28 +2572,6 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sprockets-rails-3.4.2/lib" />
         </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="sqlite3 (v1.7.3) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="4" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/test" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/test" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.7.3-x86_64-linux/test" />
-        </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
