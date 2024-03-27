@@ -4,7 +4,7 @@
 #
 # Table name: newsletters
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  active     :boolean
 #  email      :string
 #  token      :string
