@@ -20,7 +20,6 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Donate', donations_path, class: 'bold' %></li>
-        <li><%= link_to 'Analytics', analytics_path %></li>
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Communities', root_path(anchor: 'communities') %></li>
         <li><%= link_to 'Newsletters', root_path(anchor: 'newsletters') %></li>
@@ -32,6 +31,7 @@
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
                 <li><%= link_to 'Dashboard', rails_admin_path %> </li>
+                <li><%= link_to 'Analytics', analytics_path %></li>
                 <li class="divider"></li>
                 <li><%= link_to 'Log Out', destroy_user_session_path, data: { 'turbo-method': :delete } %></li>
               <% else %>
