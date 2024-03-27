@@ -58,6 +58,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'database_cleaner-active_record'
   gem 'better_errors'
   gem 'simplecov'
   gem 'foreman'
