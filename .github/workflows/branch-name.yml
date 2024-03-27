@@ -4,11 +4,10 @@ on: pull_request
 jobs:
   branch-naming-rules:
     runs-on: ubuntu-latest
-      steps:
-        - uses: deepakputhraya/action-branch-name@master
+    steps:
+      - uses: deepakputhraya/action-branch-name@master
         with:
-          regex: '([a-z])+\/(a-z)+'
-          allowed_prefixes: 'feature/,stable/,fix/,style/'
-          ignore: master, develop
+          regex: '^((feature|stable|fix|style)\/[a-z0-9._-]+)$'
+          ignore: 'master,develop'
           min_length: 5
           max_length: 30
