@@ -11,6 +11,11 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_newsletters_on_email  (email) UNIQUE
+#  index_newsletters_on_token  (token) UNIQUE WHERE (token IS NOT NULL)
+#
 class Newsletter < ApplicationRecord
   # Attributes
   after_create :signup
@@ -21,7 +26,7 @@ class Newsletter < ApplicationRecord
 
   # Methods
   def signup
-    transaction { update(token: SecureRandom.hex(8), active:true) }
+    transaction { update(token: SecureRandom.hex(8), active: true) }
   end
 
   def cancel

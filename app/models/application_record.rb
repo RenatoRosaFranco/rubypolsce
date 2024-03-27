@@ -4,8 +4,6 @@ class ApplicationRecord < ActiveRecord::Base
   primary_abstract_class
 
   def transaction(&block)
-    ActiveRecord::Base.transaction do
-      yield block if block_given?
-    end
+    ActiveRecord::Base.transaction(&block)
   end
 end

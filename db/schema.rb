@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_23_172106) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_27_202005) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_23_172106) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "logo"
+    t.index ["name"], name: "index_communities_on_name", unique: true
     t.index ["user_id"], name: "index_communities_on_user_id"
   end
 
@@ -67,6 +68,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_23_172106) do
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_newsletters_on_email", unique: true
+    t.index ["token"], name: "index_newsletters_on_token", unique: true, where: "(token IS NOT NULL)"
   end
 
   create_table "users", force: :cascade do |t|

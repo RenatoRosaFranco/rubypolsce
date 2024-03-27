@@ -21,7 +21,6 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 class User < ApplicationRecord
-
   # Associations
   has_many :communities, dependent: :destroy
 

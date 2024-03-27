@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: communities
@@ -12,6 +14,7 @@
 #
 # Indexes
 #
+#  index_communities_on_name     (name) UNIQUE
 #  index_communities_on_user_id  (user_id)
 #
 # Foreign Keys

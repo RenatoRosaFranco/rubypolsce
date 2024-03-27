@@ -5,3 +5,4 @@ class AddColumnAdminToUsers < ActiveRecord::Migration[7.1]
     add_column :users, :admin, :boolean, default: false
   end
 end
+0

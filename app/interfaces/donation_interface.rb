@@ -9,7 +9,7 @@ module DonationInterface
   end
 
   def set_donation_status
-    self.status = "pending"
+    self.status = 'pending'
   end
 
   def change_donation_status(new_status)
