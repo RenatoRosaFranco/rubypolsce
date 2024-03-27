@@ -1,0 +1,13 @@
+current directory: /home/renatofranco/rubypolsce/vendor/bundle/ruby/3.0.0/gems/json-2.7.1/ext/json
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240327-157768-hewkyx.rb extconf.rb
+creating Makefile
+
+current directory: /home/renatofranco/rubypolsce/vendor/bundle/ruby/3.0.0/gems/json-2.7.1/ext/json
+make DESTDIR\= clean
+
+current directory: /home/renatofranco/rubypolsce/vendor/bundle/ruby/3.0.0/gems/json-2.7.1/ext/json
+make DESTDIR\=
+make: Nada a ser feito para 'all'.
+
+current directory: /home/renatofranco/rubypolsce/vendor/bundle/ruby/3.0.0/gems/json-2.7.1/ext/json
+make DESTDIR\= install
