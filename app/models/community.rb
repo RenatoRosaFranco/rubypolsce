@@ -31,4 +31,8 @@ class Community < ApplicationRecord
   # Validations
   validates :name, presence: true, uniqueness: true
   validates :external_link, presence: true
+
+  def logo_url
+    nil
+  end
 end

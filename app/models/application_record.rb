@@ -3,7 +3,7 @@
 class ApplicationRecord < ActiveRecord::Base
   primary_abstract_class
 
-  def transaction(&block)
-    ActiveRecord::Base.transaction(&block)
+  def transaction(...)
+    ActiveRecord::Base.transaction(...)
   end
 end

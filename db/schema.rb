@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_27_202005) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_28_062452) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,6 +62,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_27_202005) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "thumbnail"
+    t.text "description"
+    t.string "link"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_events_on_title", unique: true
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
   create_table "newsletters", force: :cascade do |t|
     t.string "email"
     t.string "token"
@@ -82,11 +94,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_27_202005) do
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
     t.string "name"
+    t.string "referral_code"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["referral_code"], name: "index_users_on_referral_code", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "communities", "users"
+  add_foreign_key "events", "users"
 end

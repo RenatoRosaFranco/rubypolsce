@@ -155,6 +155,8 @@ GEM
     foreman (0.87.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphiql-rails (1.10.0)
+      railties
     graphql (2.3.0)
       base64
     groupdate (6.4.0)
@@ -455,6 +457,7 @@ DEPENDENCIES
   factory_bot_rails
   ffaker
   foreman
+  graphiql-rails
   graphql
   groupdate
   importmap-rails

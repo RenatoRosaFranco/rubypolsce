@@ -27,7 +27,7 @@ RSpec.describe Community do
   let(:user) { create(:user, :admin) }
 
   describe 'valid object' do
-    subject(:community) { build(:community, user: user) }
+    subject(:community) { build(:community, user:) }
 
     it { expect(community).to be_valid }
   end
@@ -38,7 +38,7 @@ RSpec.describe Community do
   end
 
   describe 'validations' do
-    subject { create(:community, user: user) }
+    subject { create(:community, user:) }
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }

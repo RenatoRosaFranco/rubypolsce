@@ -1,5 +1,5 @@
 # Define variables
-APP_NAME=rubypolsce-web
+APP_NAME=rubypolsce_web_1
 BUNDLE=bundle exec
 DOCKER_COMPOSE=docker-compose
 DOCKER=docker

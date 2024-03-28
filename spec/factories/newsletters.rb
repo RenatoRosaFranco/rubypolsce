@@ -20,11 +20,11 @@ FactoryBot.define do
   factory :newsletter do
     email { FFaker::Internet.email }
     token { SecureRandom.hex(10) }
-    status { true }
+    active { true }
 
     trait :cancel do
       token { nil }
-      status { false }
+      active { false }
     end
   end
 end

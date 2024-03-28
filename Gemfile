@@ -40,6 +40,7 @@ gem 'ransack'
 gem 'chartkick'
 gem 'groupdate'
 gem 'graphql'
+gem 'graphiql-rails'
 gem 'sentry-ruby'
 gem 'sentry-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
