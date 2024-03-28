@@ -24,10 +24,15 @@ module Types
     field :donations, [DonationType], null: false
     field :events, [EventType], null: false
     field :newsletters, [NewsletterType], null: false
+    field :posts, [PostType], null: false
 
     # Methods
     def users
       User.all
+    end
+
+    def posts
+      Post.all
     end
 
     def events

@@ -47,7 +47,7 @@ FactoryBot.define do
         content_type: 'image/jpg'
       )
     rescue OpenURI::HTTPError => e
-      puts "Failed to attach thumbnail from #{image_url}: #{e.message}"
+      puts "Failed to attach thumbnail from : #{e.message}"
     end
   end
 end

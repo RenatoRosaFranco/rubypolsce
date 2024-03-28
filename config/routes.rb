@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     get 'analytics' => 'donations#analytics'
     resources :donations, only: [:index, :create]
     resources :newsletters, only: [:create, :destroy], param: :token
+    resources :feed, only: [:index]
   end
 
   # Dashboard
