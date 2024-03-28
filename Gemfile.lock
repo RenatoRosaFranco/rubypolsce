@@ -155,6 +155,8 @@ GEM
     foreman (0.87.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphql (2.3.0)
+      base64
     groupdate (6.4.0)
       activesupport (>= 6.1)
     i18n (1.14.4)
@@ -453,6 +455,7 @@ DEPENDENCIES
   factory_bot_rails
   ffaker
   foreman
+  graphql
   groupdate
   importmap-rails
   jbuilder

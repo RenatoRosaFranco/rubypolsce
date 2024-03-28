@@ -39,6 +39,7 @@ gem 'rails_admin'
 gem 'ransack'
 gem 'chartkick'
 gem 'groupdate'
+gem 'graphql'
 gem 'sentry-ruby'
 gem 'sentry-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
@@ -92,3 +93,4 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "sassc-rails"
+gem "graphiql-rails", group: :development
